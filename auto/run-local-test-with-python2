@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -eo pipefail
+
+cd $(dirname $0)/..
+
+docker run --rm \
+  -v ${PWD}:/code \
+  -w "/code" \
+  python:2.7-alpine \
+  python ./src/hello.py
