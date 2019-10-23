@@ -1,0 +1,3 @@
+steps:
+  - command: "./auto/run-local-dev"
+    label: "Run Test"
