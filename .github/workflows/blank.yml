@@ -1,0 +1,15 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run Test with default python
+      run: ./auto/run-local-test
+    - name: Run Test with python2
+      run: ./auto/run-local-test-with-python2
