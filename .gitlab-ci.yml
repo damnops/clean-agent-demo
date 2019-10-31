@@ -1,0 +1,17 @@
+stages:
+  - test
+
+image: docker:latest
+  
+services:
+  - docker:dind
+
+default-test:
+  stage: test
+  script:
+    - ./auto/run-local-test
+
+custom-test:
+  stage: test
+  script:
+    - ./auto/run-local-test-with-python2
