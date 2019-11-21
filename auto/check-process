@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+cd $(dirname $0)/..
+
+LOCK_FILE="/tmp/process.lock"
+
+if [[ -e ${LOCK_FILE} ]]; then
+  echo "Have a running process, skip this round!"
+else
+  touch ${LOCK_FILE}
+  echo "I will sleep 60 seconds"
+  sleep 60
+fi
+
+rm -f ${LOCK_FILE}  
