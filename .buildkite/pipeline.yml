@@ -2,5 +2,5 @@ steps:
   - command: "./auto/run-local-test"
     label: "Run Test with default python"
 
-  - command: "./auto/run-local-test-with-python2"
-    label: "Run Test with python2"
+  # - command: "./auto/run-local-test-with-python2"
+  #   label: "Run Test with python2"
